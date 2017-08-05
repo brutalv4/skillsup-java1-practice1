@@ -3,6 +3,7 @@ package skillsup.practice.spring.core;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 import skillsup.practice.spring.dao.ItemDao;
+import skillsup.practice.spring.dao.UserDao;
 import skillsup.practice.spring.shared.model.Item;
 import skillsup.practice.spring.shared.model.User;
 
@@ -16,7 +17,10 @@ public class App {
 		ItemDao itemDao = context.getBean(ItemDao.class);
 		Item item = itemDao.findAll().get(0);
 
-		auctionService.createLot(item, new User());
+		UserDao userDao = context.getBean(UserDao.class);
+		User user = userDao.findAll().get(0);
+
+		auctionService.createLot(item, user);
 
 	}
 }

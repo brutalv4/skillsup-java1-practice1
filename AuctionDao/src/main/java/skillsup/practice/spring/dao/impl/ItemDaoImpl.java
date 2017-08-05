@@ -13,6 +13,6 @@ public class ItemDaoImpl extends GenericDaoImpl<Item> implements ItemDao {
         first.setWeight(1.2);
         first.setWidth(0.9);
 
-        this.save(first);
+        save(first);
     }
 }

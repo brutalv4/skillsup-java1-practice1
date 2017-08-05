@@ -5,7 +5,8 @@
        http://www.springframework.org/schema/beans/spring-beans.xsd">
 
     <bean id="itemDao" class="skillsup.practice.spring.dao.impl.ItemDaoImpl"
-        init-method="init"/>
-    <bean id="userDao" class="skillsup.practice.spring.dao.impl.UserDaoImpl"/>
+        init-method="init" />
+    <bean id="userDao" class="skillsup.practice.spring.dao.impl.UserDaoImpl"
+        init-method="init" />
 
 </beans>
