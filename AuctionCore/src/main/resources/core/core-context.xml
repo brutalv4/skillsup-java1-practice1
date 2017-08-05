@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <import resource="classpath:/dao/dao-context.xml"/>
+
+    <bean id="auctionService" class="skillsup.practice.spring.core.impl.AuctionServiceImpl">
+        <constructor-arg index="0" name="itemDao" ref="itemDao"/>
+        <constructor-arg index="1" name="userDao" ref="userDao"/>
+    </bean>
+</beans>
