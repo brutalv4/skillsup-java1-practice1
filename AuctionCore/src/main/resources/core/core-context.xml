@@ -18,4 +18,7 @@
         <constructor-arg index="3" name="auctionDurationDays" value="${auction.duration.days}"/>
         <constructor-arg index="4" name="minBidStep" value="${min.bid.step}"/>
     </bean>
+
+    <bean id="gsonBuilder" class="com.google.gson.GsonBuilder"/>
+    <bean id="gson" factory-bean="gsonBuilder" factory-method="create"/>
 </beans>
