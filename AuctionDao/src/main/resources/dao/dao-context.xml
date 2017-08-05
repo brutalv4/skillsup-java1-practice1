@@ -8,5 +8,6 @@
         init-method="init" />
     <bean id="userDao" class="skillsup.practice.spring.dao.impl.UserDaoImpl"
         init-method="init" />
+    <bean id="lotDao" class="skillsup.practice.spring.dao.impl.LotDaoImpl"/>
 
 </beans>

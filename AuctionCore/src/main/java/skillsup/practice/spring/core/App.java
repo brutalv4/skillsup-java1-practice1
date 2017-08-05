@@ -21,6 +21,7 @@ public class App {
 		User user = userDao.findAll().get(0);
 
 		auctionService.createLot(item, user);
+		auctionService.getAllActiveLots().forEach(System.out::println);
 
 	}
 }
