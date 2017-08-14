@@ -1,7 +1,5 @@
 package skillsup.practice.spring.core.impl;
 
-import org.springframework.beans.factory.annotation.Value;
-import org.springframework.stereotype.Component;
 import skillsup.practice.spring.core.AuctionService;
 import skillsup.practice.spring.dao.ItemDao;
 import skillsup.practice.spring.dao.LotDao;
@@ -15,7 +13,6 @@ import java.math.BigDecimal;
 import java.time.LocalDateTime;
 import java.util.List;
 
-@Component
 public class AuctionServiceImpl implements AuctionService {
     private final ItemDao itemDao;
     private final UserDao userDao;
@@ -25,8 +22,8 @@ public class AuctionServiceImpl implements AuctionService {
     private final int minBidStep;
 
     public AuctionServiceImpl(ItemDao itemDao, UserDao userDao, LotDao lotDao,
-                              @Value("${auction.duration.days}") int auctionDurationDays,
-                              @Value("${min.bid.step}") int minBidStep) {
+                              int auctionDurationDays,
+                              int minBidStep) {
 
         this.itemDao = itemDao;
         this.userDao = userDao;
